@@ -1,0 +1,804 @@
+package com.goys.android.app;
+
+import java.util.Locale;
+
+import com.goys.android.app.application_linking.AppLinkingActivity;
+import com.goys.android.app.contactus.ContactUsActivity;
+import com.goys.android.app.db.DBAccess;
+import com.goys.android.app.eservices.EServiceActivity;
+import com.goys.android.app.eventcalendar.EventCalendarActivity;
+import com.goys.android.app.news.NewsActivity;
+import com.goys.android.app.push_notification.GcmHelper;
+import com.goys.android.app.settings.SettingsActivity;
+import com.goys.android.app.tvstream.TvStreamActivity;
+import com.goys.android.app.webview.chatbot;
+import com.goys.android.app.webview.happyform;
+import com.goys.android.app.webview.myslocator;
+
+import android.app.AlertDialog;
+import android.app.Fragment;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
+import android.widget.ListView;
+
+public class MainActivity extends ActionBarActivity {
+
+	private Toolbar toolbar;
+	private DrawerLayout drawerLayout;
+	private ActionBarDrawerToggle drawerToggle;
+	private ListView leftDrawerList;
+	private ArrayAdapter<String> navigationDrawerAdapter;
+	private String navdrawerEvent, navdrawerAugmented, navdrawerChatbot, navdrawerSettings, navTV, navApp4u, navContactus, navNews;
+	
+	
+	int mScreenWidth;
+	int mScreenHeight;
+	HorizontalScrollView hsv;
+	
+	//Services
+	ImageButton btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10;
+	//Events
+	ImageButton btn11, btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23;
+	//EventsR
+	ImageButton btnR1,btnR2,btnR3,btnR4,btnR5,btnR6,btnR7,btnDummy;
+	
+	  
+	String language=Locale.getDefault().getLanguage();
+	public static DBAccess dbAccessObj;
+	GcmHelper gcmHelper;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	    super.onCreate(savedInstanceState);
+	    setContentView(R.layout.activity_main);
+	    nitView();
+	    if (toolbar != null) {
+	        toolbar.setTitle("");
+	        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+	        setSupportActionBar(toolbar);
+	    }
+	    initDrawer();
+	    
+	    if(language.equals("ar")){
+	    	 hsv = (HorizontalScrollView)findViewById(R.id.scroll1);
+	    	 hsv.postDelayed(new Runnable() {
+	    		    public void run() {
+	    		        hsv.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+	    		        /*for(int i = 1; i < 11; i++){
+	    		        	int d = 0;
+							try {
+								d = R.id.class.getField("menu_event" + i).getInt(0);
+							} catch (IllegalAccessException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (IllegalArgumentException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (NoSuchFieldException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+	    		        	btnDummy = (ImageButton)findViewById(d);
+	    		        	btnDummy.setVisibility(View.GONE);
+	    		        }    */
+	    		    }
+	    		}, 100L);
+	    }else{
+	    	/*for(int i = 1; i < 11; i++){
+	        	int d = 0;
+				try {
+					d = R.id.class.getField("menu_eventR" + i).getInt(0);
+				} catch (IllegalAccessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (NoSuchFieldException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	        	btnDummy = (ImageButton)findViewById(d);
+	        	btnDummy.setVisibility(View.GONE);
+	        }    */
+	    }
+	    
+	    mScreenWidth = this.getWindowManager().getDefaultDisplay().getWidth();
+		mScreenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
+
+		dbAccessObj = new DBAccess(this);
+		
+		gcmHelper = new GcmHelper(this,this);
+		
+		gcmHelper.register();
+		
+		//Buttons
+		 btn1 = (ImageButton)findViewById(R.id.btneservices);
+		    
+		 btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+         public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), EServiceActivity.class);
+                view.getContext().startActivity(Intent);}
+         });
+
+		 btn2 = (ImageButton)findViewById(R.id.btnevents);
+		 btn2.setOnClickListener(new View.OnClickListener() {
+	        @Override
+	        public void onClick(View view) {
+	            Intent Intent = new Intent(view.getContext(), EventCalendarActivity.class);
+	            view.getContext().startActivity(Intent);}
+	        });
+
+		 btn3 = (ImageButton)findViewById(R.id.btnaugmentedreality);  
+		 btn3.setOnClickListener(new View.OnClickListener() {
+	            @Override
+            public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), ARInformation.class);
+                view.getContext().startActivity(Intent);}
+            });
+
+		 btn4 = (ImageButton)findViewById(R.id.btnnews); 
+		 btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), NewsActivity.class);
+                view.getContext().startActivity(Intent);}
+            });
+		    
+	    btn5 = (ImageButton)findViewById(R.id.btnmyslocator);
+	    btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), myslocator.class);
+                view.getContext().startActivity(Intent);}
+            });
+		
+	    btn6 = (ImageButton)findViewById(R.id.btnchatbot);
+	    btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), chatbot.class);
+                view.getContext().startActivity(Intent);}
+            	
+ 	    	    	/*AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+ 		    		builder1.setMessage("Coming Soon...");
+ 		    		builder1.setTitle("Ask MYS");
+ 		    		builder1.setCancelable(true);
+
+ 		    		builder1.setPositiveButton(
+ 		    		    "Ok",
+ 		    		    new DialogInterface.OnClickListener() {
+ 		    		        public void onClick(DialogInterface dialog, int id) {
+ 		    		            dialog.cancel();
+ 		    		        }
+ 		    		    });
+ 		    		AlertDialog alert11 = builder1.create();
+ 		    		alert11.show();}*/
+            	
+            	
+            });
+		
+	    //Social Media
+	    btn7 = (ImageButton)findViewById(R.id.menu_twitter);
+	    btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {Uri uri = Uri.parse("https://twitter.com/mysbhr"); 
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);}
+            });
+	    
+	    btn8 = (ImageButton)findViewById(R.id.menu_instagram);
+	    btn8.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {Uri uri = Uri.parse("https://www.instagram.com/mysbhr/"); 
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);}
+            });
+	    
+	    
+	    btn9 = (ImageButton)findViewById(R.id.menu_youtube);
+	    btn9.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {Uri uri = Uri.parse("https://www.youtube.com/user/goysbhr/"); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);}
+            });
+	    
+	    
+	    btn10 = (ImageButton)findViewById(R.id.menu_facebook);
+	    btn10.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {Uri uri = Uri.parse("https://www.facebook.com/Mysbhr-901054683323063/"); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);}
+            });
+	    
+	    
+	    btn23 = (ImageButton)findViewById(R.id.menu_happiness);
+	    btn23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Intent = new Intent(view.getContext(), happyform.class);
+                view.getContext().startActivity(Intent);}
+            });
+	    
+	    //Events Click Events
+	    
+	    //--International Youth Conference --//
+	    btn11 = (ImageButton)findViewById(R.id.menu_event1);
+	    btn11.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		   
+	    	    if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("دول العالم للحوار والنقاش في كل ما يتعلق بالشأن الشبابي في مواضيع مختلفة في كل عام ويتضمن المؤتمر على جلسات عامة مفتوحة للجميع يحاضر فيها نخبة من أشهر المتحدثين العالميين وورش عمل فيما يتعلق بموضوع كل عام بالإضافة إلى مجموعة من الأنشطة المصاحبة والتعريفية بمملكة البحرين مستهدفين بها الدول المشاركة من مختلف أرجاء العالم. يعقد المؤتمر خلال الربع الأول من كل عام ويستهدف فئة الشباب من جميع دول العالم.");
+		    		builder1.setTitle("مؤتمر الشباب الدولي");
+		    		builder1.setCancelable(true);
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		 });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    		builder1.setMessage("The Ministry of Youth and Sport Affairs annually organizes the International Youth Conference. This conference is considered a point of contact between the youth in the Kingdom of Bahrain and their peers from around the world to engage in dialogue and discuss everything that is relevant to the youth with different topics presented each year. The conference includes public open sessions for all to attend which are led by a high caliber of well-known international speakers, workshops covering the year’s topics of the conference as well as accompanying activities that aim to introduce and Kingdom of Bahrain to the visiting delegations from around the world. The conference is held during the first quarter of each year and it is targeting the youth segment.");
+		    		builder1.setTitle("The International Youth Conference");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    		
+	    		
+	    		
+            }
+            });
+	    
+	  //--King Hamad Youth Empowerment Award--//
+	    btn12 = (ImageButton)findViewById(R.id.menu_event2);
+	    btn12.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		 if(language.equals("ar")){
+		    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    	    	builder1.setMessage(" تأتي جائزة الملك حمد لتمكين الشباب كمبادرة من وزارة شئون الشباب والرياضة في مملكة البحرين لتمكين الشباب والتركيـز على الاهتمام بهم، وهذه الجائزة هي الأولى من نوعها لجميع الدول بهدف حثهم على الاهتمام واحتواء الشباب وتشجيعاً لتحسين البنية التحتية المتعلقة بالشباب لتعود بالنفع على كافة الشرائح الشبابية والداعمة للشباب. وتأتي هذه المبادرة معززة لدور مملكة البحرين في تنمية الشباب وحرصاً منها على الاستدامة من خلال إشراك جميع فئات المجتمع في ذلك وبالأخص الشباب، لما يمتلكونه من قدرات وطاقات هائلة من شأنها تحقيق تطلعاتهم، كما تهدف هذه المبادرة أيضا إلى تحقيق أهداف التنمية المستدامة، والتي تهدف إلى توفير مستقبل أفضل للشباب، كما أنه من خلال هذه الجائزة فإن جميع المتقدمين سوف يحققون مؤشراً من مؤشرات أهداف التنمية المستدامة. إن الجائزة بما تحمله من أهداف سامية من شأنها أن ترتقي بالشريحة الشبابية إذا ما تم النظر إليها من جانب الجهات الحكومية والقطاع الخاص والقطاع الأهلي والأفراد حيث تشكل الفئات السابقة الأفرع الأساسية المحركة للعمل في القطاع الشبابي. ستمنح هذه الجائزة إلى أربع فئات مختلفة وهم: المؤسسات الحكومية، المؤسسات الخاصة، المنظمات غير الربحية والمنظمات الدولية والأفراد، ويلزم جميع الفئات ماعدا المؤسسات الحكومية أن تكون معترف بها من قبل الدولة التي يتم التقديم من خلالها، وستتكفل مملكة البحرين بجميع الالتزامات المالية للجائزة");
+			    		builder1.setTitle("جائزة الملك حمد لتمكين الشباب لتحقيق أهداف التنمية المستدامة");
+			    		builder1.setCancelable(true);
+			    		builder1.setPositiveButton(
+			    		    "Ok",
+			    		    new DialogInterface.OnClickListener() {
+			    		        public void onClick(DialogInterface dialog, int id) {
+			    		            dialog.cancel();
+			    		        }
+			    		    });
+			    		AlertDialog alert11 = builder1.create();
+			    		alert11.show();
+		    	    }
+		    	    if(language.equals("en")){
+		    	        //do nothing
+		    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+			    		builder1.setMessage("The King Hamad Youth Empowerment award comes as an initiative from the Ministry of Youth and Sport Affairs in the Kingdom of Bahrain, as the first award of its kind that will be open to all Member States. This initiative aims to empower young people and give them the attention, encouragement and motivation needed. It will encourage all eligible participants to improve the enabling environment and infrastructure for youth to allow them to be effective and productive citizens contributing to their communities. This initiative enhances the role of the Kingdom of Bahrain in youth development and its commitment to sustainability, through the involvement of all segments of society in it, particularly young people, as they own the abilities and energies that will achieve this. The initiative also aims to achieve the Sustainable Development Goals that aim to provide the best for young people's future and through this award; all applicants will have achieved SDG targets. This prestigious award including all that it will stand for and its goals, will get all sectors of the community involved and bring us a step forward in not only raising awareness for the importance of the youth but take us a step forward to achieving many goals that will help us create a better future. ");
+			    		builder1.setTitle("King Hamad Youth Empowerment Award to Achieve the SDGs");
+			    		builder1.setCancelable(true);
+			    		builder1.setPositiveButton(
+			    		    "Ok",
+			    		    new DialogInterface.OnClickListener() {
+			    		        public void onClick(DialogInterface dialog, int id) {
+			    		            dialog.cancel();
+			    		        }
+			    		    });
+			    		AlertDialog alert11 = builder1.create();
+			    		alert11.show();
+		    	    }
+		    		
+	    		
+	    		
+            }
+            });
+
+	  //--Ajyal 2030--//
+	    btn13 = (ImageButton)findViewById(R.id.menu_event3);
+	    btn13.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		 if(language.equals("ar")){
+		    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    	    	builder1.setMessage("يقدم مركز سلمان الثقافي في وزارة شؤون الشباب والرياضة للناشئة خلال فترة الإجازة الصيفية برنامج أجيال 2030  ويشتمل على الكثير من الأنشطة المتنوعة التي تلبي رغبات المشاركين لصقل مواهبهم ومهاراتهم نحو تطوير المستوى الإبداعي لديهم، حيث يقدم المركز باقة متكاملة من الأنشطة برؤية عصرية متواكبة مع ما ترنو إليه القيادة الحكيمة في تهيئة أجيال قادرة على مواكبة الحاضر وصولاً للمستقبل، في عدة مجالات كالفنون والقيادة والعلوم والتكنلوجيا والإعلام والصحة والرياضة");
+			    		builder1.setTitle("أجيال 2030");
+			    		builder1.setCancelable(true);
+
+			    		builder1.setPositiveButton(
+			    		    "Ok",
+			    		    new DialogInterface.OnClickListener() {
+			    		        public void onClick(DialogInterface dialog, int id) {
+			    		            dialog.cancel();
+			    		        }
+			    		    });
+			    		AlertDialog alert11 = builder1.create();
+			    		alert11.show();
+		    	    }
+		    	    if(language.equals("en")){
+		    	        //do nothing
+		    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+			    		builder1.setMessage("During the summer holidays, Salman Cultural Center at the Ministry of youth and Sport Affairs offers a program called 'Ajyal 2030'. It includes many activities that meet the participants' needs to enhance their talents and skills towards developing their creative skills. This program comes from our wise leadership's perspective in creating generations capable of keeping up with the present and being ready for the future in various fields such as arts, leadership, science, technology, media, health and sports.");
+			    		builder1.setTitle("Ajyal 2030");
+			    		builder1.setCancelable(true);
+
+			    		builder1.setPositiveButton(
+			    		    "Ok",
+			    		    new DialogInterface.OnClickListener() {
+			    		        public void onClick(DialogInterface dialog, int id) {
+			    		            dialog.cancel();
+			    		        }
+			    		    });
+			    		AlertDialog alert11 = builder1.create();
+			    		alert11.show();
+
+		    	    }
+		    	    
+	    		
+            }
+            });
+	  
+	  //-- Nasser Bin Hamad International Youth Creativity Award --//
+	    btn13 = (ImageButton)findViewById(R.id.menu_event4);
+	    btn13.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		 if(language.equals("ar")){
+		    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    	    	builder1.setMessage("تأتي جائزة ناصر بن حمد العالمية للإبداع الشبابي سنويا لتنمية القطاع الشبابي، وإيجاد الحافز للشباب لإطلاق العنان أمام ابداعاتهم ومهاراتهم وقدراتهم الابتكارية التي يتميزون بها في مجالات مختلفة منها: الابداع العلمي، التصميم الجرافيكي، التصوير الفوتوغرافي، إنتاج الأفلام، التصميم المعماري، الرسم والتشكيل");
+			    		builder1.setTitle("جائزة ناصر بن حمد العالمية للإبداع الشبابي");
+			    		builder1.setCancelable(true);
+
+			    		builder1.setPositiveButton(
+			    		    "Ok",
+			    		    new DialogInterface.OnClickListener() {
+			    		        public void onClick(DialogInterface dialog, int id) {
+			    		            dialog.cancel();
+			    		        }
+			    		    });
+			    		AlertDialog alert11 = builder1.create();
+			    		alert11.show();
+		    	    }
+		    	    if(language.equals("en")){
+		    	        //do nothing
+		    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+			    		builder1.setMessage("The Nasser Bin Hamad International Youth Creativity award that held on yearly basis stresses on the development of the Youth Sector and works as an incentive for young people to unleash their creativity, skills and innovative abilities that are distinguished in six different fields including: Science, graphic design, photography, film production, architecture and art.");
+			    		builder1.setTitle("Nasser Bin Hamad International Youth Creativity Award");
+			    		builder1.setCancelable(true);
+
+			    		builder1.setPositiveButton(
+			    		    "Ok",
+			    		    new DialogInterface.OnClickListener() {
+			    		        public void onClick(DialogInterface dialog, int id) {
+			    		            dialog.cancel();
+			    		        }
+			    		    });
+			    		AlertDialog alert11 = builder1.create();
+			    		alert11.show();
+
+		    	    }
+            }
+            });
+	    
+	  //-- Youth City 2030--//
+	    btn14 = (ImageButton)findViewById(R.id.menu_event5);
+	    btn14.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("  تعد مدينة شباب 2030 مبادرة شبابية غير مسبوقة في المملكة تهدف لتوفير أفضل ظروف الرعاية للشباب وتمكينهم وحشد طاقاتهم ليتم توجيهها التوجيه السليم وتزويدهم بالمعارف اللازمة التي تنمي المهارات والسمات القيادية لديهم وهو مشروع يتفاعل إيجابيا مع الرؤية الاقتصادية 2030  والتي ركزت على تفعيل دور الشباب في صياغة مفردات التنمية الشاملة لمملكة البحرين على مختلف الأصعدة.");
+		    		builder1.setTitle("مدينة شباب 2030");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    		builder1.setMessage("Youth City 2030 is an unprecedented youth initiative in the Kingdom aimed at providing the best conditions for caring for young people, empowering them and mobilizing their energies to provide them with the necessary knowledge and skills and to develop their leadership skills. This project positively interacts with the Economic Vision 2030, which focuses on activating the role of young people in the development of the Kingdom on various levels.");
+		    		builder1.setTitle("Youth City 2030");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();		
+	    	    }
+            }
+            });
+	    
+	  //-- 13th Bahrain Universities Model United Nations --//
+	    btn15 = (ImageButton)findViewById(R.id.menu_event6);
+	    btn15.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("تعد جلسات المؤتمر محاكاة لجلسات منظمة الأمم المتحدة، ويهدف البرنامج إلى ترسيخ فكرة أن الحوار البناء اليوم يمكن أن يوصلنا للحلول غداً، ويساهم في تأسيس 'مواطنين عالميين' Global Citizen والمواطن العالمي هو من يستطيع التفاعل على مستوى عالمي مع أي شخص مهما اختلفت ثقافته وموطنه بحيث تكون لديه مهارات المشاركة المدنية والفعالية السياسية، التعاطف الثقافي، احترام التنوع، والقدرة على التوفيق بين الصراعات والتوصل إلى توافق في الآراء من خلال وسائل سلمية.ر");
+		    		builder1.setTitle("جلسات الأمم المتحدة للجامعات");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+
+		    		
+
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("The sessions of the conference are a simulation of the UN sessions. The program aims to instill the idea that constructive dialogue today can lead to solutions tomorrow, contribute to the establishment of a global citizen and the global citizen is able to interact on a global level with anyone, regardless of its culture and homeland. Have the skills of civic engagement and political effectiveness, cultural empathy, respect for diversity, the ability to reconcile conflicts and reach consensus through peaceful means.");
+		    		builder1.setTitle("Bahrain Universities Model United Nations");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+
+		    		
+
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();		
+		    		
+	    	    }
+	    		
+	    				
+            }
+            });
+	    
+	  //-- Emtiyaz award for Youth Centers and National Sports Clubs --//
+	    btn16 = (ImageButton)findViewById(R.id.menu_event7);
+	    btn16.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("من منطلق التطوير الشامل للأندية والمراكز الشبابية في مملكة البحرين، أطلقت وزارة شؤون الشباب والرياضة (جائزة امتياز) للأندية والمراكز الشبابية وهي جائزة سنوية تهدف للتغيير النوعي في منهجيات العمل المطبقة فيهما لتحقيق أفضل النتائج من خلال خلق جو تنافسي شريف في قطاعي الأندية والمراكز الشبابية للوصول إلى مستوى التميز.");
+		    		builder1.setTitle("جائزة امتياز");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+
+		    		
+
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    		builder1.setMessage("As part of the overall development of the clubs and youth centers in the Kingdom of Bahrain, the Ministry of Youth and Sports has launched an excellence award “IMTIYAZ”  for clubs and youth centers on yearly basis aiming at qualitative changes in the working methodologies applied in them. This is  to achieve the best results by creating a competitive atmosphere in the clubs and youth centers to reach and sustain the highest levels of excellence.");
+		    		builder1.setTitle("Imtiyaz");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+
+		    		
+
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();		
+		    		
+	    	    }
+	    		
+	    				
+            }
+            });
+	   
+	  //-- Khalid Bin Hamad Youth Theatre Award for National Sports Clubs and Youth Centers and Special Needs â€“Third Version --//
+	    btn17 = (ImageButton)findViewById(R.id.menu_event8);
+	    btn17.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("تنظيم مهرجان مسرحي شبابي لتنشيط وتطوير الحركة المسرحية في الأندية الوطنية والمراكز الشبابية.");
+		    		builder1.setTitle("تنظيم مهرجان مسرحي شبابي لتنشيط وتطوير الحركة المسرحية في الأندية الوطنية والمراكز الشبابية خلال شهر اكتوبر من كل عام، بهدف إثراء مسيرة المسرح الشبابي في الأندية الوطنية والمراكز الشبابية وتحفيزهم على دعم الحراك المسرحي الشبابي الذي من شانه خدمة المجتمع بالأفكار المختلفة ودعم جيل الشباب وتشجيعهم على الابداع المسرحي وتعميق التواصل الاجتماعي والثقافي بين مرتادي الأندية الوطنية والمراكز الشبابية باعتبار ان المسرح مصدر للعمل الجماعي");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    		builder1.setMessage("Organizing a youth theatrical festival to revive and develop the theatrical movement of national clubs and youth centers, during October of each year, in order to enrich the youth theater activity in the national clubs and youth centers and motivate them to support the youth theater movement which would serve the community with different ideas and support the young generation and encourage them to theatrical creativity and deepen the social and cultural communication between the visitors of national clubs and youth centers, Source of collective action.");
+		    		builder1.setTitle("Khalid Bin Hamad Youth Theatre Award for National Sports Clubs and Youth Centers and Special Needs");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();		
+		    		
+	    	    }
+		
+            }
+            });
+	    
+	  //-- Khalid Bin Hamad Futsal Championship  for Youth Centers and Special Needs- Fourth Version --//
+	    btn18 = (ImageButton)findViewById(R.id.menu_event9);
+	    btn18.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("إقامة دوري لكرة قدم الصالات لشباب المراكز الشبابية ولذوي الاعاقة");
+		    		builder1.setTitle("إقامة دوري لكرة قدم الصالات لشباب المراكز الشبابية ولذوي الإعاقة بهدف تعزيز روح التنافس الشريف بين منتسبي المراكز الشبابية واكتشاف الطاقات والمواهب الرياضية وتطويرها ومد جسور التعارف والتواصل الاجتماعي والرياضي بين مرتادي المراكز الشبابية ودمج ذوي الإعاقة مع نظرائهم الأسوياء باعتبارهم جزء لا يتجزأ من المجتمع.");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    		builder1.setMessage("Organizing Futsal Championship directed to Youth Centers and Special Needs In order to enhance the spirit of honest competition between the employees of the youth centers and to discover and develop the talents and sports talents and extend the bridges of acquaintance and social and sports communication between the youth centers and the integration of the disabled with their peers as an integral part of society.");
+		    		builder1.setTitle("Khalid Bin Hamad Futsal Championship  for Youth Centers and Special Needs.");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();		
+		    		
+	    	    }
+	    		
+	    				
+            }
+            });
+
+	  //-- Bahrain sports talent identification program --//
+	    btn19 = (ImageButton)findViewById(R.id.menu_event10);
+	    btn19.setOnClickListener(new View.OnClickListener() {
+	    	@Override
+            public void onClick(View view) {
+	    		if(language.equals("ar")){
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+	    	    	builder1.setMessage("  اكتشاف المواهب الرياضية في مملكة البحرين والمراكز الشبابية وصقلها لتكون جاهزة للمشاركة في الدوريات و البطولات المحلية والعربية والعالمية من خلال زيارات ميدانية، مهرجان الانتقاء، برنامج تدريبي صيفي مكثف بالإضافة ال البرنامج التدريبي المستمر.");
+		    		builder1.setTitle("برنامج مملكة البحرين لاكتشاف المواهب الرياضية");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();
+	    	    }
+	    	    if(language.equals("en")){
+	    	        //do nothing
+	    	    	AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+		    		builder1.setMessage("The Talent program has a major role it structures  a coherent sports platform. It insures the release of continuous generations of promising players of which are the base of an aspiring bright future for the sports industry in the Kingdom of Bahrain the programs aims to Choose promising aspiring sports talents in the various individual and group games it also thrives to Develop sports talents physically  through constant training by Providing professional training to the players all through the year by coordinating  with national clubs and sports associations not forgetting the Constant liaising with professionals to bench mark the players in a high rank of performance, training that would guarantee their optimum readiness to compete and gain success     ");
+		    		builder1.setTitle("Bahrain sports talent identification program ");
+		    		builder1.setCancelable(true);
+
+		    		builder1.setPositiveButton(
+		    		    "Ok",
+		    		    new DialogInterface.OnClickListener() {
+		    		        public void onClick(DialogInterface dialog, int id) {
+		    		            dialog.cancel();
+		    		        }
+		    		    });
+
+		    		AlertDialog alert11 = builder1.create();
+		    		alert11.show();		
+	    	    }		
+            }
+            });
+
+	    
+	}
+
+	private void nitView() {
+		Resources res = getResources();
+		navdrawerEvent = res.getString(R.string.navigation_drawer_eventcalendar);
+		navdrawerAugmented = res.getString(R.string.navigation_drawer_augmentedreality);
+		navdrawerChatbot = res.getString(R.string.navigation_drawer_chatbot);
+		navdrawerSettings = res.getString(R.string.navigation_drawer_settings);
+		navTV = res.getString(R.string.navigation_drawer_navtv);
+		navApp4u  = res.getString(R.string.navigation_drawer_appsforu);
+		navContactus = res.getString(R.string.navigation_drawer_contactus);
+		navNews = res.getString(R.string.navigation_drawer_news);
+		
+	    leftDrawerList = (ListView) findViewById(R.id.left_drawer);
+	    toolbar = (Toolbar) findViewById(R.id.toolbar);
+	    drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+	     
+	    DataModel[] drawerItem = new DataModel[4];
+        drawerItem[0] = new DataModel(R.drawable.icn_stng_tv, navTV);
+        drawerItem[1] = new DataModel(R.drawable.icn_stng_appsforyou, navApp4u);
+        drawerItem[2] = new DataModel(R.drawable.icn_stng_contactus, navContactus);
+        drawerItem[3] = new DataModel(R.drawable.icn_stng_settings, navdrawerSettings);
+        
+        
+        
+        DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.list_view_item_row, drawerItem);
+        leftDrawerList.setAdapter(adapter);
+        leftDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        
+	}
+
+	private void initDrawer() {
+
+	    drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
+
+	        @Override
+	        public void onDrawerClosed(View drawerView) {
+	            super.onDrawerClosed(drawerView);
+
+	        }
+
+	        @Override
+	        public void onDrawerOpened(View drawerView) {
+	            super.onDrawerOpened(drawerView);
+
+	        }
+	    };
+	    drawerLayout.setDrawerListener(drawerToggle);
+	}
+	
+	private class DrawerItemClickListener implements ListView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            selectItem(position);
+        }
+
+    }
+	
+	private void selectItem(int position) {
+
+		Intent Intent = new Intent();
+		
+        switch (position) {
+        
+            case 0:
+            	 Intent = new Intent(MainActivity.this, TvStreamActivity.class);
+                 startActivity(Intent);
+                break;
+            case 1:
+            	 Intent = new Intent(MainActivity.this, AppLinkingActivity.class);
+                 startActivity(Intent);
+                break;
+            case 2:
+            	 Intent = new Intent(MainActivity.this, ContactUsActivity.class);
+                 startActivity(Intent);
+                break;
+            case 3:
+           	 Intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(Intent);
+               break;    
+            
+
+            default:
+                break;
+        }
+	}
+	
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState) {
+	    super.onPostCreate(savedInstanceState);
+	    drawerToggle.syncState();
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+	    super.onConfigurationChanged(newConfig);
+	    drawerToggle.onConfigurationChanged(newConfig);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    //getMenuInflater().inflate(R.menu.my, menu);
+	    return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    int id = item.getItemId();
+	    if (id == R.id.action_settings) {
+	        return true;
+	    }
+	    if (drawerToggle.onOptionsItemSelected(item)) {
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
+	}
+	}

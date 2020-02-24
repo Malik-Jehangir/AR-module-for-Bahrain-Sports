@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.goys.android.app"
+    android:versionCode="10"
+    android:versionName="2.5" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.goys.android.app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.goys.android.app.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".GOYSApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+<meta-data
+            android:name="com.google.android.gms.version"
+android:value="@integer/google_play_services_version"
+            />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+ 
+ <activity android:label="@string/app_name" 
+             android:screenOrientation="landscape" 
+             android:name=".UnityPlayerActivity">
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="false" />
+</activity>
+    
+ 
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAppTheme" >
+            
+            
+        </activity>
+        <activity
+            android:name=".emigration.EmigrationAndVisaActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".sportsparticipation.SportsParticipationsForNationalClubsActivity"
+            android:label="@string/title_activity_contactus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".contactus.ContactUsActivity"
+            android:label="@string/title_activity_contactus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".news.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".news.NewsDetailActivity"
+            android:label="@string/title_activity_news_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".eservices.EServiceActivity"
+            android:label="@string/title_activity_eservice"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.andorid.components.afilechooser.FileChooserActivity"
+            android:enabled="@bool/use_activity"
+            android:exported="true"
+            android:icon="@drawable/ic_chooser"
+            android:label="@string/choose_file"
+            android:theme="@style/ChooserTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.OPENABLE" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.andorid.components.afilechooser.localstorage.LocalStorageProvider"
+            android:authorities="com.ianhanniballake.localstorage.documents"
+            android:enabled="@bool/use_provider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS" >
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="0441996f5f4022a9113a74a39f74e2efe63f1b8b" />
+
+        <activity
+            android:name=".maintenance.MaintenanceFormActivity"
+            android:label="@string/title_activity_maintenance_form"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".demo.DemoActivity"
+            android:label="@string/title_activity_demo"
+            android:screenOrientation="portrait" >
+        </activity>
+		<activity
+            android:name="com.goys.android.app.application_linking.AppLinkingActivity"
+            android:label="@string/title_activity_app_linking"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        <receiver
+            android:name=".push_notification.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.goys.android.app" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".push_notification.GcmMessageHandler" />
+
+        
+        
+        <activity 
+            android:name=".tvstream.TvStreamActivity" 
+            android:screenOrientation="portrait" 
+            android:label="@string/title_activity_app_linking">
+        </activity>
+        
+         <activity 
+            android:name=".eventcalendar.EventCalendarActivity" 
+            android:screenOrientation="portrait" 
+            android:label="@string/title_activity_event_calendar">
+        </activity>
+        
+         <activity 
+            android:name=".eventcalendar.EventCalendarDetailActivity" 
+            android:screenOrientation="portrait" 
+            android:label="@string/title_activity_event_calendar">
+        </activity>
+        
+         <activity 
+            android:name=".MainActivity2" 
+            android:screenOrientation="portrait" 
+            android:label="Test Screen">
+        </activity>
+        
+        <activity 
+            android:name=".webview.myslocator" 
+            android:screenOrientation="portrait" 
+            android:label="@string/title_activity_myslocator">
+        </activity>
+        
+        <activity 
+            android:name=".webview.happyform" 
+            android:screenOrientation="portrait" 
+            android:label="@string/title_activity_myslocator">
+        </activity>
+        
+    </application>
+
+</manifest>

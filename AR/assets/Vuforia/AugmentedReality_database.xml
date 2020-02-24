@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="threatre" size="500.000000 270.665527" />
+    <ImageTarget name="futsul-1" size="500.000000 500.000000" />
+    <ImageTarget name="Mawahib" size="500.000000 707.258057" />
+    <ImageTarget name="redCarpet" size="728.000000 1122.847412" />
+    <ImageTarget name="BUMN" size="322.000000 142.423080" />
+    <ImageTarget name="NBHTEXTen" size="240.000000 99.653976" />
+    <ImageTarget name="NBHTEXTarabic" size="359.000000 115.796043" />
+    <ImageTarget name="nbhaen2" size="523.000000 1260.502319" />
+    <ImageTarget name="riyadah" size="870.000000 2181.268066" />
+    <ImageTarget name="nbhaen" size="683.000000 455.555664" />
+    <ImageTarget name="ajyal" size="713.000000 550.778992" />
+    <ImageTarget name="khaen" size="915.000000 1326.822510" />
+    <ImageTarget name="imtiaz" size="2339.000000 1510.052734" />
+    <ImageTarget name="IYC" size="991.000000 440.592651" />
+    <ImageTarget name="text" size="405.000000 172.295166" />
+    <ImageTarget name="YouthCityLogo" size="243.000000 145.083542" />
+  </Tracking>
+</QCARConfig>

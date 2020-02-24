@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <!-- Additions -->
+    <string name="fa_icon_calendar">&#xf073;\u0020\u0020 Add to calendar</string>
+    <string name="event_notification_add">Reminder for event (</string>
+    <string name="happy_url">http://www.mys.gov.bh/Pages/Feedback.aspx?lang=en</string>
+    <string name="horizontal_scroll_event">MYS Events</string>
+    <string name="text_mys_locator">&#xf041;\u0020\u0020 MYS Locator</string>
+    
+    
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_eventcalendar">Event Calendar</string>
+    <string name="navigation_drawer_augmentedreality">Augmented Reality</string>
+    <string name="navigation_drawer_chatbot">Youth Guide</string>
+    <string name="navigation_drawer_settings">Settings</string>
+    <string name="navigation_drawer_navtv">Live Streaming</string>
+    <string name="navigation_drawer_appsforu">Apps for You</string>
+    <string name="navigation_drawer_contactus">Contact Us</string>
+    <string name="navigation_drawer_news">News</string>
+    
+    <!-- For Sample -->
+	<string name="drawer_open">open</string>
+	<string name="drawer_close">close</string>
+    
+    <string name="app_name">MYS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="chooser_title">Select a File</string>
+    <string name="action_settings">Settings</string>
+    <string name="country_prompt">Choose a country</string>
+    <string name="activity_new_message">Message</string>
+    <string name="lbl_dash">Hello World</string>
+    <string name="error_network">The Internet connection appears to be offline</string>
+
+    <!-- My Constants  -->
+    <string name="link_letsregister">https://services.bahrain.bh/wps/portal/GOYS_en</string>
+    <string name="link_finance">http://www.mys.gov.bh/en/eservices/Pages/ClubFinancialStatement.aspx</string>
+    <string name="link_yourvoice">http://www.mys.gov.bh/en/Pages/yourvoiceisheard-mobile.aspx</string>
+    
+    <!-- Action Bar Values Start -->
+    <string name="action_location_found">Location Found</string>
+    <string name="action_search">Search</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_check_updates">Updates</string>
+    <string name="action_help">Help</string>
+    <string name="action_sports_participation">Sports Participations for National Clubs</string>
+    <string name="action_emigration_and_visa">Emigration and Visa for National Clubs</string>
+
+    <!-- title activities -->
+    <string name="title_activity_emigrationandvisa">EmigrationAndVisaActivity</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_sportsparticipationsfornationalclubs">SportsParticipationsForNationalClubsActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_contactus">ContactUsActivity</string>
+    <string name="title_activity_eservice">EServiceActivity</string>
+    <string name="title_activity_demo">DemoActivity</string>
+    <string name="title_activity_app_linking">AppLinkingActivity</string>
+    <string name="title_activity_event_calendar">EventCalendarActivity</string>
+    <string name="title_activity_event_calendar_details">EventCalendarDetailsActivity</string>
+    <string name="title_activity_myslocator">MysLocatorActivity</string>
+	<string name="title_activity_happyform">HappyFormActivity</string>
+    
+    <!-- Setting Page labels -->
+    <string name="label_settings_language">Language</string>
+    <string name="label_settings_music">Sound</string>
+
+    <!-- aFileChooser- -->
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="takePicture">Take Picture</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="uploadFile">Select File</string>
+    <string name="picfromGal">Browse</string>
+    <string name="cancel">Cancel</string>
+    <string name="emptyText"></string>
+    <string name="upload">Upload</string>
+    <string name="picker_dialog_title">Attach File</string>
+
+    <!-- E-Servces Activity Buttons values -->
+    <string name="btn_emigration_visa_for_national_clubs">Emigration &amp; Visa for \nNational Clubs</string>
+    <string name="btn_participation_national_clubs">Participation for \nNational Clubs</string>
+    <string name="label_emigration_condition_to_be_met"><b>Conditions to be met:</b> 	    												\n1- The employee is in Bahrain: A copy of the work contract authenticated by the club and the clubs affairs directorate
+														\n2- The employee is from Bangladesh: Certificate of good conduct - Medical examination - Letter authenticated by the Bangladeshi embassy and the Bahraini Ministry of Foreign Affairs
+														\n3- The passport should be valid for more than 6 months
+														\n4- In case of family visa enrollment: The children age should not exceed 18 years</string>
+
+    <!-- Emigration & Visa Form -->
+
+    <string name="text_Nationality">NATIONALITY</string>
+    <string name="text_RequestType">REQUEST TYPE</string>
+    <string name="text_Residencies">RESIDENCIES</string>
+
+    <!-- Residencies Radios -->
+    <string name="text_residencies_radio_option1">RENEWAL: ORIGINAL PASSPORT- A COPY OF THE EMPLOYMENT CONTRACT-A COPY OF THE SMART CARD</string>
+    <string name="text_residencies_radio_option2">CANCELLATION: CLEARANCE COMPROMISE-ORIGINAL PASSPORT-A COPY OF THE SMART CARD</string>
+    <string name="text_residencies_radio_option3">TRANSFERENCE OF RESIDENCE: ORIGINAL PASSPORT (OLD AND NEW)</string>
+
+    <!-- Visas Radios -->
+    <string name="text_visas_option1">EXTENSION: ORIGINAL PASSPORT</string>
+    <string name="text_visas_option2">ACCESS: A COPY OF THE PASSPORT</string>
+    <string name="text_visas_option3">WORK VISA: A COPY OF THE PASSPORT</string>
+    <string name="text_visas_option4">FAMILY VISA (ENROLLMENT): COPIES OF FAMILY PASSPORTS - MARRIAGE CONTRACT AUTHENTICATED BY THE EMBASSY OF THE EMPLOYEE AND THE BAHRAINI MINISTRY OF FOREIGN AFFAIRS - CHILDRENS BIRTH CERTIFICATES - A COPY OF THE EMPLOYMENT CONTRACT</string>
+
+    <!-- Change Job Title Radios -->
+    <string name="text_changeJob_option1">A COPY OF THE NEW LABOR CONTRACT - A COPY OF THE PASSPORT</string>
+
+    <!-- Change Job Title Radios -->
+    <string name="text_changeSponsor_option1">FROM THE MINISTRY TO A NEW PLACE: A MESSAGE FROM THE NEW SPONSOR</string>
+    <string name="text_changeSponsor_option2">A NEW PLACE TO THE MINISTRY: NO OBJECTION LETTER FORM THE SPONSOR - A COPY OF THE CANCELED RESIDENCY EXTENDED FOR A MONTH - A COPY OF THE INTENTION TO MOVE FROM THE LABOR MARKET</string>
+
+    <!--  -->
+    <string name="text_attachments">ATTACHMENTS</string>
+    <string name="text_chooseFile">Choose File</string>
+    <string name="btn_text_add">Add</string>
+    <string name="btn_text_clear">Clear</string>
+    <string name="btn_text_submit">Submit</string>
+    <!-- Request Type Spinner Values -->
+    <string name="request_type_residence">Residencies</string>
+    <string name="request_type_visas">Visas</string>
+    <string name="request_type_jobtitle">Changing the Job Title</string>
+    <string name="request_type_sponsorship">Changing the Sponsorship</string>
+    <string name="request_type_other">Other</string>
+
+    <string-array name="request_type_arrays">
+        <item>@string/request_type_residence</item>
+        <item>@string/request_type_visas</item>
+        <item>@string/request_type_jobtitle</item>
+        <item>@string/request_type_sponsorship</item>
+        <item>@string/request_type_other</item>
+    </string-array>
+
+    <!-- Home Menus & Action bar title -->
+    <string name="menu_home"></string>
+    <string name="menu_news">News</string>
+    <string name="menu_news_details">News Details</string>
+    <string name="menu_eservice">E-Services</string>
+    <string name="menu_contactus">Contact Us</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_emigration_visa">Emigration &amp; Visa</string>
+    <string name="menu_sports_participation">Sports Participations</string>
+    <string name="menu_maintenance_form">Maintenance Form</string>
+    <string name="menu_snapfix_form">SnapFix</string>
+    <string name="menu_app_linking_form">Apps For You</string>
+    <string name="menu_tv_streaming_form">Live Streaming</string>
+	<string name="menu_event_calendar">Event Calendar</string>
+    <string name="menu_event_calendar_details">Event Details</string>
+	
+    <!-- Hints -->
+    <string name="hint_pinCode">Pin Code</string>
+    <string name="hint_clubName">Club Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_firstName">First Name</string>
+    <string name="hint_middleName">Middle Name</string>
+    <string name="hint_familyName">Family Name</string>
+    <string name="hint_job">Job</string>
+    <string name="hint_passportNumber">Passport Number</string>
+    <string name="hint_personalNumber">Personal Number</string>
+
+    <!-- SPORTS PARTICIPATIONS FOR NATIONAL CLUBS Form hints -->
+    <string name="note">Note</string>
+    <string name="bangladesh_countrysel_msg">Please provide a copy of pages 1, 2, 3, 4, 8 and 9 of the passport</string>
+    <string name="india_countrysel_msg">Please provide a copy of page 36 of the passport</string>
+    <string name="hint_championship_and_gamename">Championship and Games Name</string>
+    <string name="hint_participation_date_location">Participation Date and Location</string>
+    <string name="hint_consent_of_concerned_union">Consent of Concerned Union</string>
+    <string name="hint_participation_copy">Participation Copy</string>
+    <string name="hint_participation_list">Participation List</string>
+    <string name="hint_bank_accounts_details_of_participating_members">Bank Accounts Details of Participating Members</string>
+    <string name="hint_tournament_list">Tournament List</string>
+    <string name="hint_participation_budget_form">Participation Budget Form</string>
+    <string name="hint_quotations_and_supporting_documents">Quotations and Supporting Documents</string>
+    <string name="hint_notes">Notes</string>
+    <string name="hint_notificaion">Note: Apply before 30 days from the championship</string>
+    <!-- <string name="label_participation_budget_form"><a href="http://www.google.com" rel="nofollow">Participation Budget Form</a></string> -->
+    <string name="link_participation_budget_form">https://dl.dropboxusercontent.com/u/29327815/ParticipationBgtForm.xlsx</string>
+
+    <!-- Error Messages -->
+    <string name="invalidEmail">Invalid Email</string>
+    <string name="emptyField">This field is required</string>
+    <string name="requiredField">You must specify a value for required fields</string>
+    <string name="onlyNumericAllowed">Only Numeric value required</string>
+    <string name="wrongCharacterFound">Invalid Character Found</string>
+    <string name="onlyCharacterAllow">Characters only</string>
+    <string name="onlyCharacterAndNumberAllow">Only characters and numbers allowed</string>
+    <string name="invalidePinCode">Invalid PinCode</string>
+    <string name="invalidePinCodeLength">Invalid PinCode</string>
+    <string name="serviceNotAvailable">Service Not available</string>
+    <string name="networkConnectionRequired">Network connection required</string>
+    <string name="applicationundermaintenance">Application is under maintenance. Please try later.</string>
+    <string name="gps_service_not_available">GPS service not available</string>
+    <string name="cannot_get_location">Current location cannot be retrieved</string>
+    <string name="fileTypeNotSupported">File type not supported for Attachment</string>
+    <string name="invalid_number_lenght">Must be an 9 digit number</string>
+    <string name="maintenance_invalid_number_lenght">Must be an 8 digit number</string>
+    <string name="wrongDateSelection">Date must be greater or current</string>
+
+    <!-- Contact us Page -->
+    <string name="label_hq_first_block">Ministry of Youth &amp; Sports Affairs (MYS) - Head Quarter</string>
+    <string name="label_hq_second_block">Youth Innovation Center</string>
+    <string name="label_hq_third_block">Salman Cultural Center</string>
+    <string name="label_hq_fourth_block">Muharraq Model Youth Center</string>
+    
+    <string name="label_phone">Phone:</string>
+    <string name="label_fax">Fax:</string>
+    <string name="label_address">Address:</string>
+    <string name="label_email">Email:</string>
+
+    <!-- General Organization for Youth &amp; Sports (GOYS) - Head Quarter -->
+    <string name="label_hq_phone_value">+97317114000</string>
+    <string name="label_hq_fax_value">+97317114422</string>
+    <string name="label_hq_address_value"><a>Manama\,Seef District\u002C\u00A0P.O.Box:5498</a></string>
+    <string name="label_hq_email_value">info@mys.gov.bh</string>
+
+    <!-- Youth Innovation Center -->
+    <string name="label_yic_phone_value">+97317114170</string>
+    <string name="label_yic_fax_value">+97317114184</string>
+    <string name="label_yic_address_value"><u>Manama, Um AL Hassam, P.O.Box: 5498</u></string>
+    <string name="label_yic_email_value">info@mys.gov.bh</string>
+
+    <!-- Salman Cultural Center -->
+    <string name="label_scc_phone_value">+97317114179</string>
+    <string name="label_scc_fax_value">+97317714181</string>
+    <string name="label_scc_address_value">Manama, Qudiaybia, P.O.Box: 5498</string>
+    <string name="label_scc_email_value">info@mys.gov.bh</string>
+
+    <!-- MMYC Center -->
+    <string name="label_mmyc_phone_value">+97377997000</string>
+    <string name="label_mmyc_fax_value">-</string>
+    <string name="label_mmyc_address_value">Road 64, Block 225, Building 1463 </string>
+    <string name="label_mmyc_email_value">mmycentre@gmail.com</string>
+    
+    <!-- LoadMore PullToRefresh -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    <string name="banner_news">No News to show</string>
+    
+    <string name="banner_event_calendar">No Calendar to show</string>
+    
+    <string name="banner_app_linking">No Applications to show</string>
+
+    <!-- Messages -->
+    <string name="successful_submission_msg">Your request has been submitted successfully to followup kindly provide this reference number:</string>
+    <string name="submission_in_progress">Submission in Progress..</string>
+    <string name="verifying_pincode_msg">Verifying PinCode</string>
+
+    <!-- alert Title and Buttons -->
+    <string name="alert_error_title">Error</string>
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_cancel">Cancel</string>
+    <string name="sharing_alert_title">Share</string>
+
+    <string-array name="unsupportedExentions">
+        <item>.exe</item>
+        <item>.zip</item>
+        <item>.war</item>
+        <item>.js</item>
+        <item>.rar</item>
+        <item>.iso</item>
+        <item>.apk</item>
+    </string-array>
+    
+    <!-- Application Linking -->
+    <string name="app_islamiyat_title">Islamiyat</string>
+	<string name="app_islamiyat_packagename">com.ega.islamiyat</string>
+    <string name="app_traffic_services_title">Traffic Services</string>
+	<string name="app_traffic_services_packagename">com.ega.trafficservices</string>
+    <string name="app_student_exam_result_title">Student Exam Results</string>
+	<string name="app_student_exam_result_packagename">com.ega.examresult</string>
+    <string name="app_eguide_bahrain_title">eGuide Bahrain</string>
+	<string name="app_eguide_bahrain_packagename">com.ega.eguidebahrain</string>
+    <string name="app_bahrain_today_title">Bahrain Today</string>
+	<string name="app_bahrain_today_packagename">com.ega.bahraintoday</string>
+    <string name="app_bahrain_cinema_schedule_title">Bahrain Cinema Schedule</string>
+	<string name="app_bahrain_cinema_schedule_packagename">com.BahrainCinemaSchedule</string>
+    <string name="app_bahrain_cinema_booking_title">Bahrain Cinema Booking</string>
+	<string name="app_bahrain_cinema_booking_packagename">http://cinema.bh/</string>
+    <string name="app_endomondo_sports_tracker_title">Endomondo Sports Tracker</string>
+	<string name="app_endomondo_sports_tracker_packagename">com.endomondo.android</string>
+    <string name="app_restaurant_nutrition_title">Restaurant Nutrition</string>
+	<string name="app_restaurant_nutrition_packagename">com.unifiedlifestyle.rn</string>
+    <string name="app_bna_live_title">Bahrain TV - Bahrain News Agency</string>
+	<string name="app_bna_live_packagename">rtsp://iaa.flashmediacast.com:2387/live//Channel-55</string>
+    <string name="app_btv_sports_live_title">Bahrain TV - Bahrain Sports Channel</string>
+	<string name="app_btv_sports_live_packagename">rtsp://185.105.4.106:1935/live/Bahrain Sports</string>
+	<string name="app_arab_gulf_title">Arab Youth Calendar</string>
+	<string name="app_arab_gulf_league_packagename">com.arableagueyouthcalendar.example</string>
+	<string name="app_tawasul_title">Tawasul</string>
+	<string name="app_tawasul_packagename">com.ega.fix2go</string>
+    
+	
+    <string name="title_activity_maintenance_form">MaintenanceFormActivity</string>
+
+    <string-array name="facility_name_array">
+        <item>No Facility Names Available</item>
+    </string-array>
+    
+    <!-- <item>e. Governorate</item> -->
+    <string-array name="governorate_array">
+        
+        <item>Capital</item>
+        <item>Central</item>
+        <item>Muharraq</item>
+        <item>Northern</item>
+        <item>Southern</item>
+    </string-array>
+    
+    <!-- <item>Maintenance Type</item> -->
+    <string-array name="maintenance_type_array">
+        <item>Normal</item>
+        <item>Emergency</item>
+    </string-array>
+    
+    <string-array name="service_type_public_emergency_arrays">
+        <item>Service Type</item>
+    </string-array>
+
+    <!-- Hints -->
+    <string name="hint_job_description">Job Description</string>
+    <string name="hint_place_required_maintenance">Place Required Maintenance</string>
+    <string name="lbl_instructions">Instructions</string>
+    <string name="lbl_manual">Manual</string>
+    <string name="lbl_automatic">Automatic</string>
+    <string name="hint_building_no">a. Building No.</string>
+    <string name="hint_road_no">b. Road No.</string>
+    <string name="hint_block_no">c. Block No.</string>
+    <string name="hint_area">d. Area.</string>
+    <string name="hint_governorate">e. Governorate</string>
+    <string name="hint_mobile_no">Mobile / Telephone No.</string>
+    <string name="hint_date">Date</string>
+    <string name="lbl_default">Manual</string>
+    <string name="lbl_gps">GPS</string>
+    <string name="lbl_service_type">Service Type</string>
+    <string name="error_service_type">Service types not found</string>
+    <string name="lbl_fetching_service_types">Fetching Service Types</string>
+    <string name="lbl_fetching_facilities">Fetching Facility Names</string>
+    <string name="lbl_fetching_location">Fetching Location</string>
+    <string name="lbl_facility_name">Facility Name</string>
+    <string name="lbl_maintenance_type">Maintenance Type</string>
+    <string name="lbl_location_detail">Location Details</string>
+    <string name="lbl_snapfix_form">SnapFix Form</string>
+    <string name="text_emergency">Emergency</string>
+    <string name="instruction_message">Please enter the specific place where the maintenane is required.\nExample: Football field, Hall No. A and etc.</string>
+   
+</resources>

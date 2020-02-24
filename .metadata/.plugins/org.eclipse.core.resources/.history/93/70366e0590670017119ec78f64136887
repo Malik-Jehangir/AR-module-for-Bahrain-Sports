@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Augmented Reality Instructions -->
+    <string name="menu_arinformaiton">الواقع المعزز</string>
+    <string name="ar_information_english_heading">كيف يعمل&quot;</string>
+    <string name="ar_information_english_p1">١. لفتح خاصية الواقع المعزز يرجى الضغط على الزر ادناه.</string>
+    <string name="ar_information_english_p2"> ٢. قم بتوجيه الكاميرا إلى أي شعار من برامج أو فعاليات الوزارة.</string>
+    <string name="ar_information_english_p3">٣. سيظهر على الشعار أيقونة إما لعرض الفيديو أو لرابط إلى موقع البرنامج أو الفعالية.</string>
+    <string name="ar_information_english_p4">٤. اضغط على كلمة رجوع للعودة إلى الصفحة الرئيسية.</string>
+     <string name="text_begin">ابدأ</string>
+    
+    <!-- Additions -->
+    <string name="fa_icon_calendar">&#xf073;    إضافة إلى الرزنامة</string>
+    <string name="event_notification_add">تذكير بموعد الفعالية (</string>
+    <string name="happy_url">http://www.mys.gov.bh/Pages/Feedback.aspx?lang=ar</string>
+    <string name="horizontal_scroll_event">برامج الوزارة </string>
+    <string name="text_mys_locator">&#xf041;\u0020\u0020 مواقعنا </string>
+    
+    
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_eventcalendar">فعالياتنا </string>
+    <string name="navigation_drawer_augmentedreality">الواقع المعزز</string>
+    <string name="navigation_drawer_chatbot">الدليل الشبابي</string>
+    <string name="navigation_drawer_settings">الإعدادات</string>
+    <string name="navigation_drawer_navtv">البث المباشر</string>
+    <string name="navigation_drawer_appsforu">تطبيقاتك</string>
+    <string name="navigation_drawer_contactus">اتصل بنا</string>
+    <string name="navigation_drawer_news">آخر الأخبار</string>
+    
+    <string name="app_name">GOYS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="chooser_title"></string>
+    <string name="action_settings">Settings</string>
+    <string name="country_prompt">Choose a country</string>
+    <string name="activity_new_message">Message</string>
+    <string name="lbl_dash">--</string>
+    <string name="error_network">يبدو أنك غير متصل بالإنترنت</string>
+    
+    <!-- My Constants  -->
+    <string name="link_letsregister">https://services.bahrain.bh/wps/portal/GOYS_ar</string>
+    <string name="link_finance">http://www.mys.gov.bh/ar/eservices/Pages/ClubFinancialStatement.aspx</string>
+    <string name="link_yourvoice">http://www.mys.gov.bh/ar/Pages/yourvoiceisheard-mobile.aspx</string>
+    
+
+    <!-- Action Bar Values Start -->
+    <string name="action_location_found">Location Found</string>
+    <string name="action_search">Search</string>
+    <string name="action_refresh">تحديث</string>
+    <string name="action_check_updates">Updates</string>
+    <string name="action_help">Help</string>
+    <string name="action_sports_participation">المشاركات الرياضية للأندية الوطنية</string>
+    <string name="action_emigration_and_visa">معاملات الهجرة والجوازات للأندية الوطنية</string>
+
+    <!-- Home Menus & Action bar title -->
+    <string name="menu_home"></string>
+    <string name="menu_news">آخر الأخبار</string>
+    <string name="menu_news_details">تفاصيل الخبر</string>
+    <string name="menu_eservice">الخدمات الإلكترونية</string>
+    <string name="menu_contactus">اتصل بنا</string>
+    <string name="menu_settings">الإعدادات</string>
+    <string name="menu_emigration_visa">معاملات الهجرة والجوازات</string>
+    <string name="menu_sports_participation">المشاركات الرياضية</string>
+    <string name="menu_maintenance_form">استمارة الصيانة</string>
+    <string name="menu_snapfix_form">سناب فكس</string>
+    <string name="menu_app_linking_form">تطبيقاتك</string>
+    <string name="menu_tv_streaming_form">البث المباشر</string>
+    <string name="menu_event_calendar">فعالياتُنا</string>
+	<string name="menu_event_calendar_details">فعالياتُنا</string>
+    
+    <!-- aFileChooser- -->
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="upload">Upload</string>
+    <string name="uploadFile">Select File</string>
+    <string name="picker_dialog_title">ارفاق الملف</string>
+    <string name="picfromGal">ارفاق صورة</string>
+    <string name="takePicture">التقاط صورة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="emptyText"></string>
+
+    <!-- Emigration & Visa Form -->
+
+    <string name="text_Nationality">الجنسية </string>
+    <string name="text_RequestType">نوعية الطلب</string>
+    <string name="text_Residencies">الإقامات</string>
+    <string name="label_emigration_condition_to_be_met"><b>شروط يجب توافرها :</b> \n1- العامل موجود في البحرين : نسخة من عقد العمل مصدق من النادي وإدارة شئون الأندية
+\n2- العامل من بنجلادش : شهادة حسن سير وسلوك - فحص طبي - رسالة مصدقة من السفارة البنغلادشية ووزارة الخارجية البحرينية
+\n3- يجب أن يكون الجواز صالحاً لأكثر من 6 شهور
+\n4- في حالة إصدار تأشيرة عائلية: يجب ألا يتجاوز عمر الأولاد 18 سنة</string>
+
+    <!-- Residencies Radios -->
+    <string name="text_residencies_radio_option1">تجديد: الجواز الأصلي - نسخة من عقد العمل - نسخة من البطاقة الذكية</string>
+    <string name="text_residencies_radio_option2">إلغاء: مخالصة التسوية - الجواز الأصلي - نسخة من البطاقة الذكية</string>
+    <string name="text_residencies_radio_option3">نقل الإقامة: الجواز الأصلي (القديم والجديد )</string>
+
+    <!-- Visas Radios -->
+    <string name="text_visas_option1">تمديد: جواز السفر الأصلي</string>
+    <string name="text_visas_option2">الدخول: نسخة من الجواز</string>
+    <string name="text_visas_option3">تأشيرة عمل: نسخة من الجواز</string>
+    <string name="text_visas_option4">تأشيرة عائلية (التحاق) : نسخ من جوازات العائلة - عقد الزواج مصدق من سفارة دولة العامل ووزارة الخارجية البحرينية - شهادات ميلاد الأولاد - نسخة من عقد العمل</string>
+
+    <!-- Change Job Title Radios -->
+    <string name="text_changeJob_option1">نسخة من عقد العمل الجديد - نسخة من الجواز</string>
+
+    <!-- Change Job Title Radios -->
+   <string name="text_changeSponsor_option1">من الوزارة إلى مكان عمل جديد: رسالة من الكفيل الجديد</string>
+	<string name="text_changeSponsor_option2">من مكان جديد إلى الوزارة: رسالة لا مانع من الكفيل - نسخة من إلغاء الإقامة ممددة لمدة شهر - نسخة من (نية انتقال) من سوق العمل</string>
+
+    <string name="text_attachments">المرفقات</string>
+    <string name="text_chooseFile">اختر ملف</string>
+    <string name="btn_text_add">إضافة</string>
+    <string name="btn_text_clear">مسح</string>
+    <string name="btn_text_submit">إرسال</string>
+
+    <!-- Request Type Spinner Values -->
+    <string name="request_type_residence">الإقامات</string>
+    <string name="request_type_visas">التأشيرات</string>
+    <string name="request_type_jobtitle">تغيير مسمى وظيفي</string>
+    <string name="request_type_sponsorship">تحويل كفالة</string>
+    <string name="request_type_other">أخرى</string>
+
+    <string-array name="request_type_arrays">
+        <item>@string/request_type_residence</item>
+        <item>@string/request_type_visas</item>
+        <item>@string/request_type_jobtitle</item>
+        <item>@string/request_type_sponsorship</item>
+        <item>@string/request_type_other</item>
+    </string-array>
+
+    <!-- Setting Page labels -->
+    <string name="label_settings_music">الأصوات</string>
+    <string name="label_settings_language">اللغة</string>
+
+    <!-- Hints -->
+    <string name="hint_pinCode">الرقم السري </string>
+    <string name="hint_clubName">اسم النادي </string>
+    <string name="hint_email">البريد الإلكتروني</string>
+    <string name="hint_firstName">الاسم الأول</string>
+    <string name="hint_middleName">اسم الأب</string>
+    <string name="hint_familyName">اسم العائلة </string>
+    <string name="hint_job">الوظيفة </string>
+    <string name="hint_passportNumber">رقم الجواز</string>
+    <string name="hint_personalNumber">الرقم الشخصي</string>
+
+    <!-- SPORTS PARTICIPATIONS FOR NATIONAL CLUBS Form hints -->
+    <string name="note">ملاحظة</string>
+    <string name="bangladesh_countrysel_msg">يجب إرفاق نسخة من صفحة رقم 1 و 2 و 3 و 4 و 8 و 9 من الجواز</string>
+    <string name="india_countrysel_msg">يجب إرفاق نسخة من صفحة رقم 36 من الجواز</string>
+    <string name="hint_championship_and_gamename">اسم البطولة واللعبة</string>
+    <string name="hint_participation_date_location">موعد ومكان المشاركة</string>
+    <string name="hint_consent_of_concerned_union">موافقة الاتحاد المعني</string>
+    <string name="hint_participation_copy">نسخة عن دعوة المشاركة</string>
+    <string name="hint_participation_list">كشف بأسماء الوفد المشارك </string>
+    <string name="hint_bank_accounts_details_of_participating_members">بيانات الحسابات البنكية للوفد المشارك</string>
+    <string name="hint_tournament_list">لائحة البطولة</string>
+    <string name="hint_participation_budget_form">الاستمارة المالية للمشاركة</string>
+    <string name="hint_quotations_and_supporting_documents">التسعيرات والمستندات الثبوتية</string>
+    <string name="hint_notes">ملاحظات/ إضافات</string>
+    <string name="hint_notificaion">ملاحظة :يرجى تقديم الطلب قبل 30 يوم من تاريخ البطولة</string>
+
+    <!-- Error Messages -->
+    <string name="invalidEmail">الرجاء إدخال البريد الالكتروني على الشكل الصحيح </string>
+    <string name="emptyField">هذا الحقل إجباري </string>
+    <string name="onlyNumericAllowed">إدخال قيمة رقمية فقط</string>
+    <string name="invalidePinCode">الرقم السري غير صحيح</string>
+    <string name="invalidePinCodeLength">الرقم السري غير صحيح</string>
+    <string name="serviceNotAvailable">الخدمة غير متاحة</string>
+    <string name="networkConnectionRequired">ليس لديك اتصال نشط بالانترنت</string>
+    <string name="applicationundermaintenance">الطلب قيد الصيانة، يرجى المحاولة لاحقاً</string>
+    <string name="gps_service_not_available">خدمة نظام تحديد المواقع غير متاحة</string>
+    <string name="cannot_get_location">لا يمكن الوصول لموقعك الحالي </string>
+    <string name="requiredField">يجب تعيين قيمة للحقول المطلوبة</string>
+    <string name="wrongCharacterFound">تم العثور على رمز غير صحيح</string>
+    <string name="onlyCharacterAllow">أحرف فقط</string>
+    <string name="onlyCharacterAndNumberAllow">تم العثور على رمز غير صحيح</string>
+    <string name="fileTypeNotSupported">نوع الملف غير معتمد للمرفقات</string>
+    <string name="invalid_number_lenght">يجب أن يكون عدد من 9 أرقام</string>
+    <string name="maintenance_invalid_number_lenght">يجب أن يكون عدد من ٨ أرقام</string>
+    <string name="wrongDateSelection">Date must be greater or current</string>
+
+    <!-- Contact us Page -->
+    <string name="label_hq_first_block">وزارة شئون الشباب والرياضة-المبنى الرئيسي</string>
+    <string name="label_hq_second_block">مركز الأبداع الشبابي</string>
+    <string name="label_hq_third_block">مركز سلمان الثقافي</string>
+    <string name="label_hq_fourth_block">مركز المحرق الشبابي النموذجي</string>
+    
+    <string name="label_phone">هاتف:</string>
+    <string name="label_fax">فاكس:</string>
+    <string name="label_address">العنوان:</string>
+    <string name="label_email">البريد الكتروني:</string>
+
+    <!-- General Organization for Youth &amp; Sports (GOYS) - Head Quarter -->
+    <string name="label_hq_phone_value">+97317114000</string>
+    <string name="label_hq_fax_value">+97317114422</string>
+    <string name="label_hq_address_value"><u> المنامة، ضاحية السيف ص. ب 5498  </u></string>
+    <string name="label_hq_email_value">info@mys.gov.bh</string>
+
+    <!-- Youth Innovation Center -->
+    <string name="label_yic_phone_value">+97317114170</string>
+    <string name="label_yic_fax_value">+97317114184</string>
+    <string name="label_yic_address_value"><u>المنامة، ام الحصم ص. ب 5498 </u></string>
+    <string name="label_yic_email_value">info@mys.gov.bh</string>
+
+    <!-- Salman Cultural Center -->
+    <string name="label_scc_phone_value">+97317114179</string>
+    <string name="label_scc_fax_value">+97317714181</string>
+    <string name="label_scc_address_value"><u>المنامة، القضيبية ص. ب 5498</u></string>
+    <string name="label_scc_email_value">info@mys.gov.bh</string>
+    
+    <!-- Muharraq Model Youth Center -->
+    <string name="label_mmyc_phone_value">+97377997000</string>
+    <string name="label_mmyc_fax_value">-</string>
+    <string name="label_mmyc_address_value"><u>طريق ٦٤، مجمع ٢٢٥ ، مبنى ١٤٦٣</u></string>
+    <string name="label_mmyc_email_value">mmycentre@gmail.com</string>
+
+    <!-- LoadMore PullToRefresh -->
+    <string name="pull_to_refresh_pull_label">إسحب لتحديث …</string>
+    <string name="pull_to_refresh_release_label">اترك للتحديث …</string>
+    <string name="pull_to_refresh_refreshing_label">جاري التحميل ...</string>
+    <string name="pull_to_refresh_tap_label">اضغط لتحديث …</string>
+    <string name="banner_news">لا يوجد أخبار لإظهار</string>
+    <string name="banner_app_linking">No Applications to show</string>
+    
+
+    <!-- Messages -->
+    <string name="successful_submission_msg">لقد تم إرسال طلبك بنجاح،\nللمراجعة رقم الطلب: </string>
+    <string name="submission_in_progress">طلبك قيد التنفيذ..</string>
+    <string name="verifying_pincode_msg">جاري التأكد من الرقم السري</string>
+
+    <!-- alert Title and Buttons -->
+    <string name="alert_error_title">خطأ</string>
+    <string name="alert_button_ok">موافق</string>
+    <string name="alert_button_cancel">إلغاء</string>
+    <string name="sharing_alert_title">شارك</string>
+
+    
+    <string-array name="facility_name_array">
+        <item>اسم المرفق غير متوفر</item>
+       
+    </string-array>
+    
+    <!-- <item>ه. المحافظة</item> -->
+    <string-array name="governorate_array">
+        
+        <item>العاصمة</item>
+        <item>الوسطى</item>
+        <item>المحرق</item>
+        <item>الشمالية</item>
+        <item>الجنوبية</item>
+    </string-array>
+    
+    <!-- <item>نوع الصيانة</item> -->
+      <string-array name="maintenance_type_array">
+        <item>عادية</item>
+        <item>طارئة</item>
+      </string-array>
+    
+     <string-array name="service_type_public_emergency_arrays">
+        <item>نوع الخدمة</item>
+     </string-array>
+    
+    
+    <!-- Application Linking -->
+    <string name="app_islamiyat_title">إسلاميات</string>
+	<string name="app_traffic_services_title">خدمات المرور </string>
+	<string name="app_student_exam_result_title">نتائج وزارة التربية و التعليم للمدارس</string>
+	<string name="app_eguide_bahrain_title">دليل البحرين الإلكتروني</string>
+	<string name="app_bahrain_today_title">البحرين اليوم</string>
+	<string name="app_bahrain_cinema_schedule_title">دليل سينما البحرين</string>
+	<string name="app_bahrain_cinema_booking_title">حجوزات سينما البحرين</string>
+	<string name="app_endomondo_sports_tracker_title">"إندومودو" المساعد الرياضي</string>
+	<string name="app_restaurant_nutrition_title">مطعم التغذية</string>
+	<string name="app_bna_live_title">تلفزيون البحرين – وكالة انباء البحرين </string>
+    <string name="app_btv_sports_live_title">تلفزيون البحرين – قناة البحرين الرياضية</string>
+    <string name="app_tawasul_title">تواصل</string>
+    
+     <!-- Hints -->
+    <string name="hint_job_description">تفاصيل العمل المطلوب</string>
+    <string name="hint_place_required_maintenance">مكان الصيانة المطلوبة</string>
+    <string name="lbl_instructions">التعليمات</string>
+    <string name="lbl_manual">يدوي</string>
+    <string name="lbl_automatic">تلقائي</string>
+    <string name="hint_building_no">أ. رقم المبنى</string>
+    <string name="hint_road_no">ب. رقم الشارع</string>
+    <string name="hint_block_no">ج. رقم المجمع </string>
+    <string name="hint_area">د. المنطقة </string>
+    <string name="hint_governorate">ه. المحافظة</string>
+    <string name="hint_mobile_no">رقم الهاتف / الموبايل</string>
+    <string name="hint_date">التاريخ</string>
+    <string name="lbl_default">يدوي</string>
+    <string name="lbl_gps">تلقائي</string>
+    <string name="lbl_service_type">نوع الخدمة</string>
+    <string name="error_service_type">لم يتم العثور على نوع الخدمة </string>
+   	<string name="lbl_fetching_service_types">قيد التحميل، يرجى الانتظار</string>
+   	<string name="lbl_fetching_facilities">قيد التحميل، يرجى الانتظار</string>
+   	<string name="lbl_fetching_location">قيد التحميل، يرجى الانتظار </string>
+    <!-- <string name="lbl_facility_name">اسم المنشأة</string>
+     -->
+     <string name="lbl_facility_name">اسم المرفق</string>
+    <string name="lbl_maintenance_type">نوع الصيانة</string>
+    <string name="lbl_location_detail">تفاصيل الموقع</string>
+    <string name="lbl_snapfix_form">إستمارة سناب فكس</string>
+    <string name="text_emergency">طارئة</string>
+    
+     
+    <string name="instruction_message">يرجى تحديد المكان المطلوب لخدمة الصيانة.\n مثال: ملعب كرة القدم، القاعة أ، إلخ.</string>
+    
+    
+</resources>

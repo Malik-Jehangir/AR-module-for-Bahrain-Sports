@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- First Block -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contact_us_textview_header_height"
+                    android:background="@color/action_bar_orange"
+                    android:gravity="right|center"
+                    android:paddingRight="5dip"
+                    android:text="@string/label_hq_first_block"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_hq_phone_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_phone"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_hq_fax_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_fax"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                   <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="&#xf041;"
+                        android:textSize="@dimen/font_size_large"
+                        android:id="@+id/iconlocation"/>
+                    
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:id="@+id/hqbutton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_hq_address_value"
+                        android:textColor="@color/link_text_material_light"
+                        android:textSize="@dimen/font_size_medium" />
+
+					<!-- android:textSize="@dimen/contact_us_address_font_size_large" -->
+                    
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_address"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_hq_email_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_arabic_email_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_email"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- First Block End -->
+            
+            <!-- Second Block -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contact_us_textview_header_height"
+                    android:background="@color/action_bar_orange"
+                    android:gravity="right|center"
+                    android:paddingRight="5dip"
+                    android:text="@string/label_hq_second_block"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_yic_phone_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_phone"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_yic_fax_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_fax"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:id="@+id/yicbutton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_yic_address_value"
+                        android:textColor="@color/link_text_material_light"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_address"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_yic_email_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_arabic_email_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_email"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Second Block End -->
+            <!-- Third Block -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contact_us_textview_header_height"
+                    android:background="@color/action_bar_orange"
+                    android:gravity="right|center"
+                    android:paddingRight="5dip"
+                    android:text="@string/label_hq_third_block"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_scc_phone_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_phone"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_scc_fax_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_fax"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:id="@+id/sccbutton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_scc_address_value"
+                        android:textColor="@color/link_text_material_light"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_address"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_scc_email_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_arabic_email_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_email"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Third Block End -->
+            
+              <!-- Fourth Block -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contact_us_textview_header_height"
+                    android:background="@color/action_bar_orange"
+                    android:gravity="right|center"
+                    android:paddingRight="5dip"
+                    android:text="@string/label_hq_fourth_block"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_mmyc_phone_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_phone"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:autoLink="phone"
+                        android:padding="5dp"
+                        android:text="@string/label_mmyc_fax_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_fax"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:id="@+id/mmycbutton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_mmyc_address_value"
+                        android:textColor="@color/link_text_material_light"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_address"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="@string/label_mmyc_email_value"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="@dimen/contact_us_arabic_email_textview_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:text="@string/label_email"
+                        android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Fourth Block End -->
+            
+            <!-- 
+             <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:padding="5dp" >
+
+                           <Button
+			                android:id="@+id/btn_contact_mys_locator"
+			                android:layout_width="match_parent"
+			                android:layout_height="@dimen/event_details_button_height"
+			                android:layout_marginTop="10dp"
+			                android:background="@color/new_button_color"
+			                android:text="@string/text_mys_locator"
+			                android:textColor="@color/btn_text_color"
+			                android:textSize="@dimen/font_size_large" />
+                      
+                   
+                </LinearLayout>
+                
+                 -->
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

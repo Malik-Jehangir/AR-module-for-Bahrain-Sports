@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "816472355622",
+    "firebase_url": "https://mysbh-2b31e.firebaseio.com",
+    "project_id": "mysbh-2b31e",
+    "storage_bucket": "mysbh-2b31e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816472355622:android:030c7d353c5e0d05",
+        "android_client_info": {
+          "package_name": "com.goys.android.app.push_notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816472355622-spkd311q8s4fniuqvqub5kl4h0h6aopj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgBa6khjGgdf148Po72pk3RvpQdrKJclU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

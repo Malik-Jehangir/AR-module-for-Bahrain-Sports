@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- color for navigation drawer -->
+    <color name="primaryColor">#054a6b</color>
+	<color name="primaryColorDark">#757575</color>
+	
+    <color name="new_button_color">#6794AA</color>
+    <color name="form_background_color">#D4D4D4</color>
+    <color name="submit_button_color">#E6464D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="header_title_color">#919191</color>
+    <color name="btn_text_color">#FFFFFF</color>
+    <color name="add_button_color">#E6464D</color>
+    <color name="clear_button_color">#B9070E</color>
+    <color name="choosefile_button_color">#3072a9</color>
+    <color name="attachmentListItemBackgroundColor">#F8F8F8</color>
+    <color name="attachmentListItemSeparatorColor">#A9A9A9</color>
+    <color name="greenStart">#ff33dd44</color>
+    <color name="greenMid">#ff0A8815</color>
+    <color name="greenEnd">#ff1da130</color>
+    <color name="lightwhite">#CCFFFFFF</color>
+    <color name="hint_color">#808080</color>
+	<color name="blue_text">#005f8d</color>
+    <!-- Choose Button Color -->
+    <color name="state_pressed_stroke">#054a6b</color>
+    <color name="pressed_gradient_end">#054a6b</color>
+    <color name="pressed_gradient_start">#054a6b</color>
+
+    <!-- Action Bar Theme Colors -->
+
+    <color name="action_bar_green">#054a6b</color>
+    <color name="action_bar_red">#054a6b</color>
+    <color name="action_bar_orange">#054a6b</color>
+    <color name="action_bar_purple">#054a6b</color>
+    <color name="banner_color">#AAAAAA</color>
+    <!-- Edit Text -->
+    <color name="edit_text_defaultbg">#d2d2d2</color>
+    <color name="image_bg">#dbdbdc</color>
+
+    <!-- LoadMore PullToRefresh -->
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="blue">#39B7CD</color>
+    
+    <!-- Blue Splascreen -->
+    <color name="splash_blue">#004c70</color>
+    
+    <!-- Link Color -->
+    <color name="text_link_color">#c0ad7e</color>
+
+    
+   
+    
+</resources>

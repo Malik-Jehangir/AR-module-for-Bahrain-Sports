@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/form_background_color"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_pinCode"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participations_edittext_height"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/edittext_default_bg"
+                    android:gravity="right|center"
+                    android:hint="@string/hint_pinCode"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_clubName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participations_edittext_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_default_bg"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="right|center"
+                    android:hint="@string/hint_clubName"
+                    android:inputType="none"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_championship_and_gamename"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participations_edittext_height"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/edittext_default_bg"
+                    android:gravity="right|center"
+                    android:hint="@string/hint_championship_and_gamename"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+            <!-- Participation Date & Location -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_participation_date_location"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/participation_date_location"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_p_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_participation_date_location_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Consent of Concerned Union -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_consent_of_concerned_union"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/consent_of_concerned_union"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_c_concerned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_consent_of_concerned_union_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Participation Copy -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_participation_copy"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/participation_copy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_p_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_participation_copy_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Participation List -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_participation_list"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/participation_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_p_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_participation_list_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Bank Accounts Details of Participating Members -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_bank_accounts_details_of_participating_members"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bank_account_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color" />
+
+            <TextView
+                android:id="@+id/Label_b_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_bank_account_details_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Tournament List -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_tournament_list"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tournament_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_t_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_tournament_list_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Participation Budget Form -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_participation_budget_form"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/participation_budget_form"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_p_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_participation_budget_form_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/p_budget_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:text="@string/hint_participation_budget_form"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/font_size_medium" />
+
+            <!-- Quotations and Supporting Documents -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/sports_participation_textview_height"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/hint_quotations_and_supporting_documents"
+                    android:textSize="@dimen/font_size_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/quotations_and_supporting_documents"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:onClick="chooseFileOnClick"
+                android:text="@string/text_chooseFile"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/Label_q_suporting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/attached_quotations_and_supporting_documents_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="gone" />
+
+            <!-- Notes -->
+
+            <EditText
+                android:id="@+id/et_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittext_default_bg"
+                android:gravity="right|center"
+                android:hint="@string/hint_notes"
+                android:inputType="textMultiLine"
+                android:textCursorDrawable="@null"
+                android:lines="4"
+                android:maxLines="4"
+                android:minLines="4"
+                android:padding="5dp"
+                android:text="@string/emptyText"
+                android:textSize="@dimen/font_size_large" />
+
+            <com.goys.android.app.widgets.GOYSTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participation_textview_height"
+                android:layout_marginTop="18dp"
+                android:gravity="right|center"
+                android:text="@string/hint_notificaion"
+                android:textColor="@color/action_bar_red"
+                android:textSize="@dimen/font_size_large" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/choose_file_btn"
+                android:text="@string/btn_text_clear"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sports_participations_button_height"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/choose_file_btn"
+                android:text="@string/btn_text_submit"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:id="@+id/eventDetailLyout"
+     >
+     <!-- android:scrollbars="none" -->
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background ="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/event_detail_image_height">
+		    
+            <ImageView
+                android:id="@+id/event_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_detail_image_height"
+               	android:layout_centerInParent="true" >
+            </ImageView>
+          
+        </RelativeLayout> 
+        
+        
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <com.goys.android.app.widgets.GOYSTextView
+                android:id="@+id/event_detail_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="Al Hajj Discusses Means of Developing Facilities of Shakhoura Youth Center - See more at: http://www.goys.gov.bh/en/media/Pages/NewsDetails.aspx?ItemId=328#sthash.cUd0ZIWC.dpuf"
+                android:textColor="#00000c"
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/date"
+                    android:layout_gravity="center" />
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:id="@+id/event_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dip"
+                    android:text="June 06, 2014"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:id="@+id/event_detail_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="dddddddddddddd"
+            android:textColor="#00000c"
+            android:textSize="@dimen/font_size_medium" />
+        
+        <!-- Add to Calendar -->
+         <Button
+                android:id="@+id/btn_event_detail_addcalendar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_details_button_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/choose_file_btn"
+                android:text="@string/fa_icon_calendar"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+        
+    </LinearLayout>
+
+</ScrollView>

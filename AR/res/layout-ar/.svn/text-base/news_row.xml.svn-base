@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/news_activity_padding_left"
+    android:paddingRight="@dimen/news_activity_padding_right"
+    android:paddingTop="@dimen/news_activity_padding_top" >
+
+    <RelativeLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!-- Title Of News -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/green_arrow" />
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toLeftOf="@+id/thumbnail"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="28dp"
+            android:text="مركز سلمان الثقافي ينظم احتفالا بمناسبة ليلة القرقاعون"
+            android:textColor="#343434"
+            android:textSize="@dimen/font_size_medium"
+            android:textStyle="bold" />
+
+        <!-- New Description -->
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:id="@+id/description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="3dip"
+            android:layout_toLeftOf="@+id/thumbnail"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="30dp"
+            android:text="ينظم مركز سلمان الثقافي التابع لإدارة شئون الشباب بالمؤسسة العامة للشباب والرياضة احتفالا شعبيا بليلة القرقاعون وذلك عند الساعة التاسعة من مساء يوم الجمعة الموافق 11 يوليو الجاري بصالة المركز. "
+            
+            android:textColor="#717171"
+            android:textSize="@dimen/font_size_small" />
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/image_bg"
+            android:padding="3dip" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/image_size_news"
+                android:layout_height="@dimen/image_size_news" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/list_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_activity_greyline_height"
+        android:layout_below="@+id/parent_layout"
+        android:layout_marginTop="@dimen/news_activity_greyline_margin_top"
+        android:background="@color/gray_1" />
+
+    <!-- Rightend Arrow -->
+
+</RelativeLayout>

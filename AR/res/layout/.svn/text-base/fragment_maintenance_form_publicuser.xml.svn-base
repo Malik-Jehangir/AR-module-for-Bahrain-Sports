@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/form_background_color"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- Service Type -->
+
+            <LinearLayout
+                android:id="@+id/ll_service_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <com.goys.android.app.widgets.NoDefaultSpinner
+                    android:id="@+id/sp_service_type"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:layout_height="@dimen/maintenance_visa_spinner_height"
+                    android:background="@drawable/dropdown"
+                    android:entries="@array/service_type_public_emergency_arrays"
+                    android:prompt="@string/lbl_service_type" />
+                <!-- android:entries="@array/service_type_public_emergency_arrays" -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_service_type_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <!-- Job Description -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_job_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_default_bg"
+                    android:gravity="left|top"
+                    android:hint="@string/hint_job_description"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:maxLines="4"
+                    android:minLines="4"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <!-- Facility Name -->
+
+            <LinearLayout
+                android:id="@+id/ll_facility_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <com.goys.android.app.widgets.NoDefaultSpinner
+                    android:id="@+id/sp_facility_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_spinner_height"
+                    android:background="@drawable/dropdown"
+                    android:entries="@array/facility_name_array"
+                    android:prompt="@string/lbl_facility_name" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_facility_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+            <!-- Place Required Maintenance -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_default_bg"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/et_place_required_maintenance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left|top"
+                        android:hint="@string/hint_place_required_maintenance"
+                        android:inputType="textMultiLine"
+                        android:lines="4"
+                        android:maxLines="4"
+                        android:minLines="4"
+                        android:padding="5dp"
+                        android:textSize="@dimen/font_size_large" />
+
+                    <TextView
+                        android:id="@+id/instruction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/lbl_instructions"
+                        android:textColor="@color/action_bar_red"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Location Detail -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lbl_location_detail"
+                    android:textSize="@dimen/font_size_xlarge" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/ib_manual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_manual" />
+
+                    <ImageButton
+                        android:id="@+id/ib_gps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_gps" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Building No -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_building_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:background="@drawable/edittext_default_bg"
+                    android:hint="@string/hint_building_no"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <!-- Road No -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_road_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:background="@drawable/edittext_default_bg"
+                    android:hint="@string/hint_road_no"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <!-- Block No -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_block_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:background="@drawable/edittext_default_bg"
+                    android:hint="@string/hint_block_no"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <!-- Area -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:background="@drawable/edittext_default_bg"
+                    android:hint="@string/hint_area"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <!-- Governorate -->
+
+            <LinearLayout
+                android:id="@+id/ll_governorate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <!-- Governorate Edittext-->
+                <EditText
+                    android:id="@+id/et_governorate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:background="@drawable/edittext_default_bg"
+                    android:hint="@string/hint_governorate"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="gone" />
+           
+                 <!-- Governorate Spinner-->
+                <com.goys.android.app.widgets.NoDefaultSpinner
+                    android:id="@+id/sp_governorate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_spinner_height"
+                    android:background="@drawable/dropdown"
+                    android:entries="@array/governorate_array"
+                    android:prompt="@string/hint_governorate"
+                    android:visibility="visible" />
+           </LinearLayout>
+           <TextView
+                android:id="@+id/label_governorate_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+
+           
+
+         
+                
+
+            <!-- Choose File -->
+
+            <LinearLayout
+                android:id="@+id/ll_choose_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/b_chooseFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_button_height"
+                    android:background="@drawable/choose_file_btn"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/text_chooseFile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_attachments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emptyField"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#714"
+                android:visibility="gone" />
+            <!--
+            <ListView
+                android:id="@+id/attached_files_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="visible" />
+            -->
+
+            <com.goys.android.app.widgets.NestedListView
+                android:id="@+id/attached_files_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:divider="@color/attachmentListItemSeparatorColor"
+                android:dividerHeight="2dp"
+                android:visibility="visible" />
+
+            <!-- Email -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:background="@drawable/edittext_default_bg"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+            </LinearLayout>
+
+            <!-- Mobile/Telephone No -->
+
+            <EditText
+                android:id="@+id/et_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/maintenance_visa_edittext_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittext_default_bg"
+                android:hint="@string/hint_mobile_no"
+                android:inputType="number"
+                android:maxLength="8"
+                android:padding="5dp"
+                android:textSize="@dimen/font_size_large" />
+
+            <!-- Date -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_marginRight="2dp"
+                    android:text="*"
+                    android:textColor="@color/action_bar_red"
+                    android:textSize="@dimen/font_size_large"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/maintenance_visa_edittext_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_default_bg"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/hint_date"
+                    android:inputType="date"
+                    android:padding="5dp"
+                    android:textSize="@dimen/font_size_large" />
+
+                <ImageButton
+                    android:id="@+id/ib_date_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/calendar"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <!-- android:background="@drawable/abc_ab_bottom_solid_dark_holo" -->
+
+
+            <!-- Submit -->
+
+            <Button
+                android:id="@+id/b_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/maintenance_visa_button_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/choose_file_btn"
+                android:text="@string/btn_text_submit"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/font_size_large" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/footer_powered_by_cio" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

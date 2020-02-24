@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/attachmentListItemBackgroundColor"
+    android:orientation="horizontal"
+    android:padding="2dp" >
+
+    <!-- <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/emptyText"
+        android:src="@drawable/ic_action_delete" /> -->
+
+    <com.goys.android.app.widgets.GOYSTextView
+        android:id="@+id/attachedFileName"
+        android:layout_width="0sp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="right|center"
+        android:paddingLeft="5dp"
+        android:text="000010011.png"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/deleteAttachment"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/emptyText"
+        android:onClick="removeAttachment"
+        android:src="@drawable/ic_action_remove" />
+
+</LinearLayout>

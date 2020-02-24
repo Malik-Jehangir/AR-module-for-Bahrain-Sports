@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:padding="5dp" 
+    android:id="@+id/newDetailLyout">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/news_detail_image_height" >
+
+            <ImageView
+                android:id="@+id/news_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_detail_image_height"
+               	android:layout_centerInParent="true" >
+            </ImageView>
+        </RelativeLayout>
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:id="@+id/news_detail_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:textSize="@dimen/font_size_large"
+            android:text="المطوع يشيد بدور مركز شباب سند في احتضان الشباب "
+            android:textColor="#00000c"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="5dip" >
+
+            <com.goys.android.app.widgets.GOYSTextView
+                android:id="@+id/news_detail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:textSize="@dimen/font_size_medium"
+                android:text="08 يوليه 2014" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/date" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:id="@+id/news_detail_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="ضمن سلسلة لقاءاته مع المركز الشبابية، التقى السيد نوار عبدالله المطوع مدير ادارة الهيئات والمراكز الشبابية بالمؤسسة العامة للشباب والرياضة مع رئيس مجلس ادارة مركز شباب سند جعفر احمد حسينوفي بداية اللقاء رحب المطوع برئيس مركز شباب سند مؤكدا حرص المؤسسة العامة على وضع الاستراتيجيات الجديدة لتطوير العمل في المراكز الشبابية والرامية إلى تعزيز مسيرة الحركة الشبابية في المملكة التي نطمح من ورائها إلى تطوير البرامج المقدمة إلى القطاع الشبابي وزيادة عددها واستقطاب أكبر عدد ممكن من الشباب مشدد على أهمية تركيز المراكز الشبابية على تقديم البرامج والأنشطة التي تهيئة قيادات شبابية قادرة على قيادة العملية التنموية في مختلف المجالات. ومن جانبه أعرب رئيس مركز شباب سند عن تقديره للدعم المتواصل الذي توليه المؤسسة العامة للشباب والرياضة للمراكز الشبابية في المملكة مؤكدا أن هذا الدعم يمثل دافعا قويا لمجلس إدارة المركز من اجل تقديم كل ما من شأنه خدمة الشباب البحريني في مختلف المجالات مؤكدا حرص مجلس الإدارة على تقديم البرامج الهادفة إلى الارتقاء بالواقع الشبابي."
+            android:textColor="#00000c"
+            android:textSize="@dimen/font_size_medium" />
+    </LinearLayout>
+
+</ScrollView>

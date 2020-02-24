@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homebg"
+    tools:context="com.goys.android.app.MainActivity$PlaceholderFragment" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/main_wheel_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:scaleType="center"
+            android:src="@drawable/home_wheel_gray" />
+
+        <ImageView
+            android:id="@+id/main_inner_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:scaleType="center"
+            android:src="@drawable/home_inner_wheel_red" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/main_inner_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:src="@drawable/eserviceicn" />
+            <!-- android:layout_marginLeft="-15dp" -->
+
+            <ImageView
+                android:id="@+id/main_inner_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/main_menu_text_services" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.goys.android.app.util.circlemenu.CircleLayout
+        android:id="@+id/main_circle_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginLeft="0dp" >
+
+        <com.goys.android.app.util.circlemenu.CircleImageView
+            android:id="@+id/menu_eservices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_eservices" />
+
+        <com.goys.android.app.util.circlemenu.CircleImageView
+            android:id="@+id/menu_contactus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_contact_us" />
+
+        <com.goys.android.app.util.circlemenu.CircleImageView
+            android:id="@+id/menu_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_apps_linking" />
+
+        <com.goys.android.app.util.circlemenu.CircleImageView
+            android:id="@+id/menu_eservices_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_eservices" />
+
+        <com.goys.android.app.util.circlemenu.CircleImageView
+            android:id="@+id/menu_contactus_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_contact_us" />
+
+        <com.goys.android.app.util.circlemenu.CircleImageView
+            android:id="@+id/menu_news_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_news" />
+
+        
+        
+        
+        
+                        
+
+        
+    </com.goys.android.app.util.circlemenu.CircleLayout>
+
+</RelativeLayout>

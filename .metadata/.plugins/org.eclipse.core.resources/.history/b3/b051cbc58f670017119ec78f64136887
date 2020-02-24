@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- First Block -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <com.goys.android.app.widgets.GOYSTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contact_us_textview_header_height"
+                    android:background="@color/action_bar_orange"
+                    android:gravity="center"
+                    android:paddingLeft="5dip"
+                    android:text="@string/ar_information_english_heading"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/ar_information_english_p1" 
+                        android:textSize="@dimen/font_size_large"/>
+                   
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/ar_information_english_p2" 
+                        android:textSize="@dimen/font_size_large"/>
+                   
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/ar_information_english_p3" 
+                        android:textSize="@dimen/font_size_large"/>
+                   
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#DADADA"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <com.goys.android.app.widgets.GOYSTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/ar_information_english_p4" 
+                        android:textSize="@dimen/font_size_large"/>
+                   
+                </LinearLayout>
+              </LinearLayout>
+            <!-- First Block End -->
+            
+            
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:padding="5dp" >
+                        
+                        <Button
+			                android:id="@+id/btn_ar_information"
+			                android:layout_width="match_parent"
+			                android:layout_height="@dimen/event_details_button_height"
+			                android:layout_marginTop="10dp"
+			                android:background="@color/action_bar_orange"
+			                android:text="@string/text_begin"
+			                android:textColor="@color/btn_text_color"
+			                android:textSize="@dimen/font_size_large" />
+                </LinearLayout>
+           </LinearLayout>
+     </LinearLayout>
+</LinearLayout>

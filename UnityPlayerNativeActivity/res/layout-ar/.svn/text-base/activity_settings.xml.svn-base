@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/main_layout" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:id="@+id/tvSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_settings_language"
+            android:textColor="#919191"
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E8E8E8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp" >
+
+            <ImageButton
+                android:id="@+id/ibEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_english" />
+
+            <ImageButton
+                android:id="@+id/ibArabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_arabic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <com.goys.android.app.widgets.GOYSTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_settings_music"
+            android:textColor="#919191"
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold" />
+  
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#E8E8E8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp" >
+
+            <ImageButton
+                android:id="@+id/onMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_music_on" />
+
+            <ImageButton
+                android:id="@+id/offMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_music_off" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

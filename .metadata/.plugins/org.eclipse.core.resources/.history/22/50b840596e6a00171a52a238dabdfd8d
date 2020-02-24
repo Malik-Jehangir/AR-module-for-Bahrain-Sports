@@ -1,0 +1,35 @@
+package com.goys.android.app.webview;
+
+import java.util.Locale;
+
+import com.goys.android.app.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+public class chatbot extends Activity {
+	
+	private WebView MyWeb;
+	String language=Locale.getDefault().getLanguage();
+
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+			// TODO Auto-generated method stub
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_chatbot);
+			MyWeb = (WebView) findViewById(R.id.chatbotview);
+			MyWeb.getSettings().setLoadsImagesAutomatically(true);
+			MyWeb.getSettings().setJavaScriptEnabled(true);
+			MyWeb.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+			MyWeb.setWebViewClient(new WebViewClient());
+			  if(language.equals("ar")){
+				  MyWeb.loadUrl("http://botapplication120170702054001.azurewebsites.net/");
+			  }else{
+				  MyWeb.loadUrl("http://botapplication120170702054001.azurewebsites.net/");
+			  }
+		}
+
+}
